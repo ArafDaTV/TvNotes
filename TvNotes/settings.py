@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
+# FREE COMMENT
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
