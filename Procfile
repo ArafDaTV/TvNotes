@@ -1,0 +1,1 @@
+web: gunicorn TvNotes.wsgi --log-file -
