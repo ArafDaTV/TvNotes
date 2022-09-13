@@ -7,9 +7,8 @@ class Note(models.Model):
     note_content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
-
     def __str__(self):
-        return self.note_title[0:50] + "..." if self.note_title > 50 else ""
+        return self.note_title
 
     class Meta:
         ordering = ['last_updated']
