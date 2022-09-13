@@ -123,7 +123,7 @@ USE_TZ = True
 
 LOGIN_URL = 'login_page'
 LOGOUT_REDIRECT_URL = 'home_page'
-django_heroku.settings(locals())
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
