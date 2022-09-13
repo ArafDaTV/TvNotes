@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-6b(x-0q!(qlwrh)^d_4p2e2=1p(bq72z%5)&qp20l)t4ow!1#t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'tvnotes.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'TvNotes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'D982UieK515sU2MBfseT',
-        'HOST': 'containers-us-west-84.railway.app',
-        'PORT': '5585'
+        'ENGINE': 'django.db.backends.sqlite',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -133,4 +129,3 @@ django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 WHITENOISE_USE_FINDERS = True
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
